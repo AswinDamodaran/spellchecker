@@ -26,7 +26,7 @@ function App() {
     const firstCorrection = correctedWords.find(
       (word, index) => word !== words[index]
     );
-    setSuggestedText(correctedText !== text ? correctedText : "");
+    setSuggestedText(firstCorrection ? `Did you mean: ${firstCorrection}` : "");
   };
 
   return (
